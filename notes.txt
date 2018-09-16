@@ -1,0 +1,54 @@
+git init          // init a local git repository
+git add <file(s)  // add file(s) to index in the staging area
+git status        // check status of working tree
+git commit        // commit changes in index
+
+git push          // push to remote repository
+git pull          // pull latest from remote repository
+git clone         // clone repository into a new directory
+
+windows: http://git-scm.com/download/win, use the git bash
+
+git config --global user.name 'Walter Fu'
+git config --global user.email 'walterfu23@gmail.com'
+
+git add index.html
+git status
+git rm --cached. index.html   // remove the file from staging
+git status
+
+git add .     // add all files to staging area
+
+git commit -m 'initial commit'   // commit with the given comment
+git branch login     // adds a new branch called 'login'
+git checkout login   // move to using the login branch
+<use git add, git commit etc in the new branch>
+git checkout master  // go back to the master branch
+git merge login      // to merge from the login branch to the master branch.
+
+go to github and create a new repository called myapp. 
+and copy the git remote cmd, then the git push cmd
+
+git remote add origin https://github.com/walterfu23/myapp.git
+git push -u origin master (will need to enter credentials)
+
+git push   //  after additional local commits, push the changes to github
+
+go to a brand new directory:
+git clone https://github.com/walterfu23/myapp.git  // clones the repository. url from github.
+git pull   // will pull most current changes pushed to github
+
+git remote -v   // to see all remotes
+
+alias graph='git log --all --decorate --oneline --graph'  // sets up the alias
+graph           // shows the repository graph
+git fetch origin   // get status (no files) from origin. 
+git merge origin/master  // merge from origin/master into local master branch
+git pull    // combines git fetch and git merge into a single command
+
+// create a new fork in github repository
+git remote add upstream   // add a new remote called upstream
+git remote remove <remote name>   // remove the remote
+
+
+
